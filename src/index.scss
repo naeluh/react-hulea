@@ -1,2 +1,7 @@
-@import 'bulma';
-/* @import 'scss/main.scss'; */
+/* @import 'bulma'; */
+@import 'scss/main.scss';
+@import 'scss/normalize.scss';
+
+.bk {
+  background-color: rgb(17, 17, 17);  
+}

@@ -6,9 +6,9 @@ import PropTypes from 'prop-types'
 import Helmet from 'react-helmet'
 
 import Site from './layout/Site'
-import Header from './layout/Header'
 import Content from './layout/Content'
 import Footer from './layout/Footer'
+import Nav from './layout/Nav'
 
 const Layout = ({ children }) => (
   <Site>
@@ -25,10 +25,8 @@ const Layout = ({ children }) => (
         {'rel':'stylesheet', 'href': 'https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css'}
       ]}
     />
-    <Header />
-    <Content>
-	{/* {children()} */}
-    </Content>
+    <Nav />
+    <Content/>
     <Footer />
   </Site>
 )
