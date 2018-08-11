@@ -62,5 +62,136 @@
             "link": "http://nhm.org/pterosaurs/",
             "siteInfo": "<p>I converted old code from a game the institution paid for several years ago into a robust, responsive game that allows users to determine what pterosaur they “were,” based on question logic.</p><p> The entire site was built off a responsive framework that I developed, because I needed all the code to play together, and a framework would have slowed the process. I created a “pterosaur tracker” that used the Google maps API and JS to show a pterosaur fly across the U.S., making stops on its way to the museum. </p><p>I utilized the JS Canvas API to create an image that would follow the rotational position of the KML points which gave a feeling of the pterosaur actually flying. I used requestAnimationFrame and the rendering engine which provided the pterosaur flying on the Google Map with 60fps, allowing fluid animation and preventing jitter.</p>"
         }
+    ],
+    "cv": [
+        {
+            "header": "PROFESSIONAL EXPERIENCE",
+            "class": "work",
+            "items": [
+                {
+                    "header": "2013-PRESENT Natural History Family of Museums Lead Digital Developer",
+                    "items": [
+                        "project lead and strategist for all digital properties",
+                        "admin several LAMP and MEAN systems on 3 servers",
+                        "form development client side and server side development",
+                        "integrated development between datasets, servers and APIs",
+                        "client side and server side development across various platforms",
+                        "JavaScript design and development (interactive, utility, game)"
+                    ]
+                },
+                {
+                    "header": "2012-2013 The Confluence Group, Los Angeles, California Creative Director/Web Director",
+                    "items": [
+                        "responsible for 3D animation with 3Ds Max and Vray",
+                        "maintained custom database and reporting system",
+                        "created various sites and web apps for our affiliates",
+                        "client side and server side development AngularJS and NodeJS",
+                        "retouched photos and edited promotional videos",
+                        "data visualizations for reporting various JS frameworks"
+                    ]
+                },
+                {
+                    "header": "2009-2012 Flaunt Magazine, Los Angeles, California Digital Design Director",
+                    "items": [
+                        "controlled the flow of all visual media within Flaunt Magazine’s web and print media pipeline",
+                        "created advertising, cover, and special insert design",
+                        "maintained and facilitated all technology at the office, including, large-format printers, web and LAN servers, cameras, computers, and software",
+                        "organized and edited a large range of media types, from streaming video to 3D models and high-resolution graphics",
+                        "CMS front end and back end development (Drupal)"
+                    ]
+                }
+            ]
+        },
+        {
+            "header": "EDUCATION",
+            "class": "ed",
+            "items": [{
+                "header": "Otis College of Art and Design Los Angeles, California 2002-06",
+                "items": []
+            }]
+        },
+        {
+            "header": "PERSONAL PROJECTS - see hulea.org",
+            "class": "personal",
+            "items": [
+                {
+                    "header": "Websites & Art",
+                    "items": [
+                        "2016 http://4dchat.hulea.org/",
+                        "2014 http://gifpaint.hulea.org/",
+                        "2013 http://yourimage.hulea.org/",
+                        "2010 http://unitedstatesian.com/"
+                    ]
+                }
+            ]
+        },
+        {
+            "header": "SKILLS",
+            "class": "skills",
+            "items": [
+                {
+                    "header": "Creative, philosophical thinking based in logical and algorithmic coding experience and know-how to create unique solutions for all design and development problems. Expert knowledge of creative and development software in Linux, Windows and Mac.",
+                    "items": []
+                },
+                {
+                    "header": "Languages, Systems Frameworks and Software",
+                    "items": [
+                        "Drupal 7, 8",
+                        "JavaScript ES6",
+                        "Zend Framework",
+                        "MYSQL",
+                        "MongoDB",
+                        "PHP",
+                        "Python",
+                        "Django",
+                        "Angular 2",
+                        "Ruby",
+                        "HighchartsJS",
+                        "HTML",
+                        "CSS",
+                        "SCSS",
+                        "Flash AS3",
+                        "XML",
+                        "JSON",
+                        "AWS",
+                        "Git",
+                        "Apache",
+                        "Nginx",
+                        "Varnish",
+                        "Vue",
+                        "React",
+                        "Erlang",
+                        "Larvel",
+                        "NodeJS",
+                        "Backbone",
+                        "Underscore",
+                        "Backdrop",
+                        "C",
+                        "OpenCV",
+                        "Caffe",
+                        "Tensorflow",
+                        "Wordpress",
+                        "JAVA",
+                        "Eclipse",
+                        "D3"
+                    ]
+                }
+            ]
+        },
+        {
+            "header": "AWARDS",
+            "class": "awards",
+            "items": [
+                {
+                    "header": "",
+                    "items": [
+                        "Certificate of achievement from Mayor Antonio Villaraigosa for revitalization project",
+                        "Folio Ozzie Award",
+                        "Best Overall Design, Consumer Silver Award - Flaunt Magazine April, 2010",
+                        "Best Cover, Consumer Under 250,000 Circulation Bronze Award - Flaunt Magazine: The Census Issue April, 2010"
+                    ]
+                }
+            ]
+        }
     ]
 }

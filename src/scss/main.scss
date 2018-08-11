@@ -50,7 +50,6 @@ html, body, div, span, applet, object, iframe, blockquote, pre, a, abbr, acronym
   html, body {
     margin: 0;
     color: #111;
-    font-family: "futura-pt", sans-serif;
     -webkit-font-smoothing: antialiased;
   }
   
@@ -133,7 +132,7 @@ html, body, div, span, applet, object, iframe, blockquote, pre, a, abbr, acronym
     /* display: inline-block; */
     padding: 0 12px;
     /* border-radius: 3px; */
-    background-color: #222;
+    background-color: #111;
     /* box-shadow: 0 2px 5px 0 rgba(0, 0, 0, .26); */
     color: rgba(255, 255, 255, 0.87);
     font-size: 14px;
@@ -146,7 +145,6 @@ html, body, div, span, applet, object, iframe, blockquote, pre, a, abbr, acronym
     user-select: none;
     text-decoration: none;
     border: none;
-    font-family: "futura-pt", sans-serif;
     font-weight: bolder;
     text-transform: uppercase;
     letter-spacing: 2px;
@@ -380,6 +378,10 @@ html, body, div, span, applet, object, iframe, blockquote, pre, a, abbr, acronym
   }
   
   /* Forms */
+
+  .form-input, .form-textarea {
+    margin-top: 10px
+  }
   
   form, fieldset, label {
     border: none;
@@ -390,8 +392,16 @@ html, body, div, span, applet, object, iframe, blockquote, pre, a, abbr, acronym
     height: 30px;
     margin: 10px 0;
     text-indent: 10px;
-    font-family: "futura-pt", sans-serif;
     font-size: 14px;
+    background: transparent;
+    border: 1px solid #aaa;
+    -webkit-font-variant-ligatures: none;
+    font-variant-ligatures: none;
+    height: 46px;
+    outline: none;
+    padding: 11px 16px 11px 16px;
+    width: 100%;
+    -webkit-box-sizing: border-box;
     box-sizing: border-box;
   }
   
@@ -400,9 +410,17 @@ html, body, div, span, applet, object, iframe, blockquote, pre, a, abbr, acronym
     margin: 10px 0;
     text-indent: 10px;
     height: 200px;
-    font-family: "futura-pt", sans-serif;
     font-size: 14px;
     padding: 14px;
+    box-sizing: border-box;
+    background: transparent;
+    border: 1px solid #aaa;
+    -webkit-font-variant-ligatures: none;
+    font-variant-ligatures: none;
+    outline: none;
+    padding: 11px 16px 11px 16px;
+    width: 100%;
+    -webkit-box-sizing: border-box;
     box-sizing: border-box;
   }
   
@@ -505,3 +523,22 @@ html, body, div, span, applet, object, iframe, blockquote, pre, a, abbr, acronym
   .next {
     text-decoration: none;
   }
+
+
+  footer {
+    background-color: #111;
+    margin-top: 32px;
+    margin-top: 2rem;
+    padding: 32px 0;
+    padding: 2rem 0;
+}
+
+footer div {
+  width: calc(100% - 4rem);
+  float: left;
+  margin-left: 2rem;
+}
+
+footer div p, footer div a {
+  color: #fff;
+}
