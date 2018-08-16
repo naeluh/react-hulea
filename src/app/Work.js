@@ -20,7 +20,7 @@ class Work extends React.Component {
 
     render() {
         return (
-            <div>
+            <div className="background-content">
                 {this.createProjects(data)}
             </div>
         )

@@ -18,7 +18,8 @@ class Form extends React.Component {
             first_name: '',
             last_name: '',
             email: '',
-            message: ''
+            message: '',
+            isActive: true
         }
 
         this.handleChange = this.handleChange.bind(this)
@@ -34,8 +35,19 @@ class Form extends React.Component {
     }
 
 
-    handleSubmit = (e, message) => {
+    handleSubmit = (e) => {
         e.preventDefault()
+
+        const toggleNav = () => {
+            this.setState(prevState => ({
+                isActive: !prevState.isActive
+            }))
+            setTimeout(() => {
+                this.setState(prevState => ({
+                    isActive: !prevState.isActive
+                }))
+            }, 2000)
+        }
 
         let formData = {
             first_name: this.state.first_name,
@@ -61,25 +73,17 @@ class Form extends React.Component {
             body: body
         })
             .then(function (response) {
-                console.log(response)
+                toggleNav()
                 if (response.status !== 200) {
-                    console.log(response)
                     // dispatch(setError(response.status + '===>' + response.statusText + '===>' + response.url))
                 }
                 return response.json()
             }).then(function (json) {
-                console.log(json)
                 // if (confirm('Thank you for your message. Can I erase the form?')) {
-                this.setState({
-                    first_name: '',
-                    last_name: '',
-                    email: '',
-                    message: ''
-                })
                 // }
                 ///dispatch(setData(json, q))
             }).catch(function (err) {
-                // alert('There was some problem with sending your message.')
+                alert('There was some problem with sending your message.')
                 console.log(err)
             });
 
@@ -111,15 +115,20 @@ class Form extends React.Component {
             first_name: '',
             last_name: '',
             email: '',
-            message: ''
+            message: '',
+            isActive: true
         })
     }
 
     render() {
         return (
             <section className="offset60">
+
                 <form className='react-form' onSubmit={this.handleSubmit}>
+
                     <h1>Contact</h1>
+
+                    <h3 className={this.state.isActive ? 'hide' : ''}>Thanks!</h3>
 
                     <fieldset className='form-group'>
                         <FormLabel htmlFor='first_name' title='First Name:' />

@@ -19,7 +19,6 @@ class About extends React.Component {
 
         for (let i = 0; i < item.items.length; i++) {
           let listItem = item.items[i]
-          console.log(listItem)
           lists.push(
             <li key={listItem} className="li">{listItem}</li>
           )

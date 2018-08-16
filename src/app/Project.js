@@ -21,7 +21,7 @@ const createProject = (d, m) => {
                 </section>
                 <section className="offset40">
                     <Link to={`/project/${d.work[nextProject].url}`} title="#" alt="#" id="next" className="next">
-                        <i className="fa fa-arrow-right" aria-hidden="true"></i>
+                        <i className="fa fa-arrow-right" aria-hidden="true">></i>
                     </Link>
                 </section>
             </div>
