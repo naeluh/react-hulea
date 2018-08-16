@@ -122,43 +122,46 @@ class Form extends React.Component {
 
     render() {
         return (
-            <section className="offset60">
+            <div className="background-content">
 
-                <form className='react-form' onSubmit={this.handleSubmit}>
+                <section className="offset60">
 
-                    <h1>Contact</h1>
+                    <form className='react-form' onSubmit={this.handleSubmit}>
 
-                    <h3 className={this.state.isActive ? 'hide' : ''}>Thanks!</h3>
+                        <h1>Contact</h1>
 
-                    <fieldset className='form-group'>
-                        <FormLabel htmlFor='first_name' title='First Name:' />
+                        <h3 className={this.state.isActive ? 'hide' : ''}>Thanks!</h3>
 
-                        <input id='first_name' className='form-input' name='first_name' type='text' required onChange={this.handleChange} value={this.state.first_name} />
-                    </fieldset>
+                        <fieldset className='form-group'>
+                            <FormLabel htmlFor='first_name' title='First Name:' />
 
-                    <fieldset className='form-group'>
-                        <FormLabel htmlFor='last_name' title='Last Name:' />
+                            <input id='first_name' className='form-input' name='first_name' type='text' required onChange={this.handleChange} value={this.state.first_name} />
+                        </fieldset>
 
-                        <input id='last_name' className='form-input' name='last_name' type='text' required onChange={this.handleChange} value={this.state.last_name} />
-                    </fieldset>
+                        <fieldset className='form-group'>
+                            <FormLabel htmlFor='last_name' title='Last Name:' />
 
-                    <fieldset className='form-group'>
-                        <FormLabel htmlFor='email' title='Email:' />
+                            <input id='last_name' className='form-input' name='last_name' type='text' required onChange={this.handleChange} value={this.state.last_name} />
+                        </fieldset>
 
-                        <input id='email' className='form-input' name='email' type='email' required onChange={this.handleChange} value={this.state.email} />
-                    </fieldset>
+                        <fieldset className='form-group'>
+                            <FormLabel htmlFor='email' title='Email:' />
 
-                    <fieldset className='form-group'>
-                        <FormLabel htmlFor='message' title='Message:' />
+                            <input id='email' className='form-input' name='email' type='email' required onChange={this.handleChange} value={this.state.email} />
+                        </fieldset>
 
-                        <textarea id='message' className='form-textarea' name='message' required onChange={this.handleChange} value={this.state.message}></textarea>
-                    </fieldset>
+                        <fieldset className='form-group'>
+                            <FormLabel htmlFor='message' title='Message:' />
 
-                    <fieldset className='form-group'>
-                        <input id='formButton' className='button' type='submit' placeholder='Send message' />
-                    </fieldset>
-                </form>
-            </section>
+                            <textarea id='message' className='form-textarea' name='message' required onChange={this.handleChange} value={this.state.message}></textarea>
+                        </fieldset>
+
+                        <fieldset className='form-group'>
+                            <input id='formButton' className='button' type='submit' placeholder='Send message' />
+                        </fieldset>
+                    </form>
+                </section>
+            </div>
         )
     }
 }
