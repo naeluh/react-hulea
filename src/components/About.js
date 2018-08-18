@@ -3,8 +3,7 @@ import { Link } from "react-router-dom"
 import data from '../data/data.json'
 
 class About extends React.Component {
-
-
+  
   createCV = (d) => {
     let html = []
     let lists = []

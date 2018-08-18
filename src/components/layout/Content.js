@@ -11,6 +11,7 @@ import Project from '../Project'
 
 class Content extends React.Component {
 	render() {
+		console.log(this.props)
 		return (
 			<div>
 				<Route exact path="/" component={Home}></Route>
