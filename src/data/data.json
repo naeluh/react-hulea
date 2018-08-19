@@ -69,14 +69,73 @@
             "class": "work",
             "items": [
                 {
-                    "header": "2013-PRESENT Natural History Family of Museums Lead Digital Developer",
+                    "header": "2017-PRESENT J. Paul Getty Museum Digital Developer",
                     "items": [
-                        "project lead and strategist for all digital properties",
-                        "admin several LAMP and MEAN systems on 3 servers",
-                        "form development client side and server side development",
-                        "integrated development between datasets, servers and APIs",
+                        "Internal Project Dashboard to monitor project development and milestones - Frontend: Vue, Vue-cli, Vuex, Vue-Router Backend: Wordpress, WP Rest API",
+                        "External and Internal search Backend: Apache Nutch, Elasticsearch Frontend: Vue, Vue-cli, Vue-Router",
+                        "Maintainer Getty Publications command line project called Quire to convert markdown files into html, epub, mobi, pdf and development server",
+                        "Quire leverages Nodejs, Hugo (Static Site Generator), Pandoc (Files Converter), Prince XML (convert html to pdf)",
                         "client side and server side development across various platforms",
                         "JavaScript design and development (interactive, utility, game)"
+                    ]
+                },
+                {
+                    "header": "2013-2017 Natural History Family of Museums Lead Digital Developer",
+                    "items": [
+                        "project lead and strategist for all digital properties and projects",
+                        "admin several LAMP and MEAN systems on 3 servers",
+                        "form development client side and server side development",
+                        "integrated development between datasets from multi backends (MYSQL and MongoDB) and APIs",
+                        "client side and server side development across various platforms",
+                        "JavaScript design and development (interactive, utility, game) Frontend: "
+                    ]
+                },
+                {
+                    "header": "2012-2013 The Confluence Group, Los Angeles, California Creative Director/Web Director",
+                    "items": [
+                        "responsible for 3D animation with 3Ds Max and Vray",
+                        "maintained custom database and reporting system",
+                        "created various sites and web apps for our affiliates",
+                        "client side and server side development AngularJS and NodeJS",
+                        "retouched photos and edited promotional videos",
+                        "data visualizations for reporting various JS frameworks"
+                    ]
+                },
+                {
+                    "header": "2009-2012 Flaunt Magazine, Los Angeles, California Digital Design Director",
+                    "items": [
+                        "controlled the flow of all visual media within Flaunt Magazine’s web and print media pipeline",
+                        "created advertising, cover, and special insert design",
+                        "maintained and facilitated all technology at the office, including, large-format printers, web and LAN servers, cameras, computers, and software",
+                        "organized and edited a large range of media types, from streaming video to 3D models and high-resolution graphics",
+                        "CMS front end and back end development (Drupal)"
+                    ]
+                }
+            ]
+        },
+        {
+            "header": "FREELANCE",
+            "class": "freelance",
+            "items": [
+                {
+                    "header": "ACLU",
+                    "items": [
+                        "Built Drupal 7 module to make new optional frontend styles for content",
+                        "These features were created for the Southern California ACLU but were pushed to the national sites"
+                    ]
+                },
+                {
+                    "header": "Adult Swim",
+                    "items": [
+                        "Built Promotional website for new show 'Black Jesus'",
+                        "The website made use of the Javascript Canvas API "
+                    ]
+                },
+                {
+                    "header": "Adult Swim",
+                    "items": [
+                        "Built Promotional website for new show 'Black Jesus'",
+                        "The website made use of the Javascript Canvas API, CSS3, Youtube API"
                     ]
                 },
                 {
