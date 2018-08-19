@@ -1,64 +1,42 @@
 import fetch from 'isomorphic-fetch'
 
-export const REQUEST_POSTS = 'REQUEST_POSTS'
-export const RECEIVE_POSTS = 'RECEIVE_POSTS'
-export const SELECT_DATA = 'SELECT_DATA'
-export const INVALIDATE_DATA = 'INVALIDATE_DATA'
+export const FETCH_DATA_BEGIN = 'FETCH_DATA_BEGIN';
+export const FETCH_DATA_SUCCESS = 'FETCH_DATA_SUCCESS';
+export const FETCH_DATA_FAILURE = 'FETCH_DATA_FAILURE';
 
-export function selectData(data) {
-    return {
-        type: SELECT_DATA,
-        data
-    }
-}
+export const fetchDataBegin = () => ({
+    type: FETCH_DATA_BEGIN
+});
 
-export function invalidateData(data) {
-    return {
-        type: INVALIDATE_DATA,
-        data
-    }
-}
+export const fetchDataSuccess = data => ({
+    type: FETCH_DATA_SUCCESS,
+    payload: { data }
+});
 
-function requestPosts(data) {
-    return {
-        type: REQUEST_POSTS,
-        data
-    }
-}
+export const fetchDataError = error => ({
+    type: FETCH_DATA_FAILURE,
+    payload: { error }
+});
 
-function receivePosts(data, json) {
-    return {
-        type: RECEIVE_POSTS,
-        data,
-        posts: json.data.children.map(child => child.data),
-        receivedAt: Date.now()
-    }
-}
-
-function fetchPosts(data) {
+export function fetchData() {
     return dispatch => {
-        dispatch(requestPosts(data))
-        return fetch(`${data}`)
-            .then(response => response.json())
-            .then(json => dispatch(receivePosts(data, json)))
-    }
+        dispatch(fetchDataBegin());
+        return fetch("https://herriott.io/data.json")
+            .then(handleErrors)
+            .then(res => res.json())
+            .then(json => {
+                console.log(json)
+                dispatch(fetchDataSuccess(json));
+                return json;
+            })
+            .catch(error => dispatch(fetchDataError(error)));
+    };
 }
 
-function shouldFetchPosts(state, data) {
-    const posts = state.postsBydata[data]
-    if (!posts) {
-        return true
-    } else if (posts.isFetching) {
-        return false
-    } else {
-        return posts.didInvalidate
+// Handle HTTP errors since fetch won't.
+function handleErrors(response) {
+    if (!response.ok) {
+        throw Error(response.statusText);
     }
-}
-
-export function fetchPostsIfNeeded(data) {
-    return (dispatch, getState) => {
-        if (shouldFetchPosts(getState(), data)) {
-            return dispatch(fetchPosts(data))
-        }
-    }
+    return response;
 }

@@ -3,8 +3,7 @@ import { Link } from "react-router-dom"
 import data from '../data/data.json'
 
 class Work extends React.Component {
-
-    createProjects = (d, m) => {
+    createProjects = (d) => {
         let links = []
         for (let index = 0; index < d.work.length; index++) {
             let value = d.work[index];
@@ -19,8 +18,9 @@ class Work extends React.Component {
     }
 
     render() {
+        console.log(this.store)
         return (
-            <div className="background-content">
+            <div className="background-content" items={this.props.items}>
                 {this.createProjects(data)}
             </div>
         )

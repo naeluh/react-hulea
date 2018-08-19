@@ -1,70 +1,48 @@
 //===========//
 // Layout.js //
 //===========//
-import React, { Component } from 'react'
+import React from 'react'
 import Site from './layout/Site'
 import Content from './layout/Content'
 import Footer from './layout/Footer'
 import Nav from './layout/Nav'
-import PropTypes from 'prop-types'
-// import { connect } from 'react-redux'
-import {
-  fetchPostsIfNeeded,
-  invalidateData
-} from '../actions/actions'
+import { connect } from "react-redux"
+import { fetchData } from '../actions/actions'
+import { BrowserRouter } from 'react-router-dom'
 
-
-class Layout extends Component {
+class Layout extends React.Component {
 
   componentDidMount() {
-    const { dispatch, selectedData } = this.props
-    console.log(this.props)
-    dispatch(invalidateData(selectedData))
-    dispatch(fetchPostsIfNeeded(selectedData))
+    this.props.dispatch(fetchData())
   }
 
   render() {
-    const { selectedData, posts, isFetching, lastUpdated } = this.props
+    const { error, loading, items } = this.props;
+
+    if (error) {
+      return <div>Error! {error.message}</div>
+    }
+
+    if (loading) {
+      return <div>Loading...</div>
+    }
+
     return (
-      <Site>
-        <Nav />
-        <Content posts={posts} selectedData={selectedData} isFetching={isFetching} lastUpdated={lastUpdated}/>
-        <Footer />
-      </Site>
+      <BrowserRouter>
+        <Site>
+          <Nav />
+          <Content items={items} />
+          <Footer />
+        </Site>
+      </BrowserRouter>
     )
   }
 }
 
+const mapStateToProps = state => ({
+  items: state.items,
+  loading: state.loading,
+  error: state.error
+})
 
-Layout.propTypes = {
-  items: PropTypes.array,
-  selectedData: PropTypes.string.isRequired,
-  posts: PropTypes.array.isRequired,
-  isFetching: PropTypes.bool.isRequired,
-  lastUpdated: PropTypes.number,
-  dispatch: PropTypes.func.isRequired
-}
-
-/*
-function mapStateToProps(state) {
-  const { selectedData, postsByData } = state
-  const {
-    isFetching,
-    lastUpdated,
-    items: posts
-  } = postsByData[selectedData] || {
-    isFetching: true,
-    items: []
-  }
-
-  return {
-    selectedData,
-    posts,
-    isFetching,
-    lastUpdated
-  }
-}
-*/
-
-
-export default Layout
+export default connect(mapStateToProps)(Layout);
