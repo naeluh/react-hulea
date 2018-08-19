@@ -68,7 +68,7 @@
                         "Maintainer Getty Publications command line project called Quire to convert markdown files into html, epub, mobi, pdf and development server",
                         "Quire leverages Nodejs, Hugo (Static Site Generator), Pandoc (Files Converter), Prince XML (convert html to pdf)",
                         "New Docent Website Frontend: Vue, Vuex Backend: Wordpress",
-                        "Docent Site "
+                        "Docent Site was a major refactor since the last site was built 7 years ago. The sites had a scheduling system and based off the that created a custom frontend experience for wach user based on their role and schedule"
                     ]
                 },
                 {
@@ -95,10 +95,10 @@
                 {
                     "header": "2009-2012 Flaunt Magazine - Digital Design Director",
                     "items": [
-                        "controlled the flow of all visual media within Flaunt Magazine’s web and print media pipeline",
-                        "created advertising, cover, and special insert design",
-                        "maintained and facilitated all technology at the office, including, large-format printers, web and LAN servers, cameras, computers, and software",
-                        "organized and edited a large range of media types, from streaming video to 3D models and high-resolution graphics",
+                        "Controlled the flow of all visual media within Flaunt Magazine’s web and print media pipeline",
+                        "Created advertising, cover, and special insert design",
+                        "Maintained and facilitated all technology at the office, including, large-format printers, web and LAN servers, cameras, computers, and software",
+                        "Organized and edited a large range of media types, from streaming video to 3D models and high-resolution graphics",
                         "CMS front end and back end development (Drupal)"
                     ]
                 }
