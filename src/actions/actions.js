@@ -21,7 +21,8 @@ export const fetchDataError = error => ({
 export function fetchData() {
     return dispatch => {
         dispatch(fetchDataBegin());
-        return fetch("https://herriott.io/data.json")
+        console.log('here')
+        return fetch("http://localhost:3000/data/data.json")
             .then(handleErrors)
             .then(res => res.json())
             .then(json => {

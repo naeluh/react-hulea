@@ -18,9 +18,9 @@ class Work extends React.Component {
     }
 
     render() {
-        console.log(this.store)
+        console.log(this)
         return (
-            <div className="background-content" items={this.props.items}>
+            <div className="background-content">
                 {this.createProjects(data)}
             </div>
         )

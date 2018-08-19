@@ -8,7 +8,7 @@ import Footer from './layout/Footer'
 import Nav from './layout/Nav'
 import { connect } from "react-redux"
 import { fetchData } from '../actions/actions'
-import { BrowserRouter } from 'react-router-dom'
+import { BrowserRouter as Router} from 'react-router-dom'
 
 class Layout extends React.Component {
 
@@ -19,6 +19,8 @@ class Layout extends React.Component {
   render() {
     const { error, loading, items } = this.props;
 
+    console.log(items)
+
     if (error) {
       return <div>Error! {error.message}</div>
     }
@@ -28,13 +30,13 @@ class Layout extends React.Component {
     }
 
     return (
-      <BrowserRouter>
+      <Router>
         <Site>
           <Nav />
           <Content items={items} />
           <Footer />
         </Site>
-      </BrowserRouter>
+      </Router>
     )
   }
 }

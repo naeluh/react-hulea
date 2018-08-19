@@ -8,7 +8,6 @@ import Work from '../Work'
 import About from '../About'
 import Form from '../Form'
 import Project from '../Project'
-import { connect } from "react-redux"
 
 class Content extends React.Component {
 	render() {
@@ -26,10 +25,4 @@ class Content extends React.Component {
 	}
 }
 
-const mapStateToProps = state => ({
-	items: state.items,
-	loading: state.loading,
-	error: state.error
-})
-
-export default connect(mapStateToProps)(Content);
+export default Content;
