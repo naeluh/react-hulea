@@ -11,7 +11,7 @@ import { fetchData } from '../actions/actions'
 import { BrowserRouter as Router} from 'react-router-dom'
 
 class Layout extends React.Component {
-
+  
   componentDidMount() {
     this.props.dispatch(fetchData())
   }

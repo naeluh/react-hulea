@@ -11,7 +11,6 @@ import Project from '../Project'
 
 class Content extends React.Component {
 	render() {
-
 		const { items } = this.props.items;
 		return (
 			<div>
