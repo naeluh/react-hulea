@@ -11,7 +11,7 @@ const initialState = {
 };
 
 export default function dataReducer(state = initialState, action) {
-    console.log(action)
+    // console.log(action)
     switch (action.type) {
         case FETCH_DATA_BEGIN:
             // Mark the state as "loading" so we can show a spinner or something
@@ -25,7 +25,7 @@ export default function dataReducer(state = initialState, action) {
         case FETCH_DATA_SUCCESS:
             // All done: set loading "false".
             // Also, replace the items with the ones from the server
-            console.log(action)
+            // console.log(action)
             return {
                 ...state,
                 loading: false,

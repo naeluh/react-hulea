@@ -21,12 +21,12 @@ export const fetchDataError = error => ({
 export function fetchData() {
     return dispatch => {
         dispatch(fetchDataBegin());
-        console.log('here')
-        return fetch("http://localhost:3000/data/data.json")
+        // console.log('here')
+        return fetch("https://herriott.io/data.json")
             .then(handleErrors)
             .then(res => res.json())
             .then(json => {
-                console.log(json)
+                // console.log(json)
                 dispatch(fetchDataSuccess(json));
                 return json;
             })

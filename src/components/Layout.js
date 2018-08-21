@@ -19,7 +19,7 @@ class Layout extends React.Component {
   render() {
     const { error, loading, items } = this.props;
 
-    console.log(items)
+    // console.log(items)
 
     if (error) {
       return <div>Error! {error.message}</div>
