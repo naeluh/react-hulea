@@ -10,10 +10,13 @@ import { fetchData } from '../actions/actions'
 
 class Layout extends React.Component {
   
+<<<<<<< HEAD
   componentWillUpdate() {
 		window.scrollTo(0, 0);
 	}
 
+=======
+>>>>>>> db87159c7d99da5c46ffe79ae8b4cedfe530c4ba
   componentDidMount() {
     this.props.dispatch(fetchData())
   }
