@@ -10,12 +10,14 @@ const initialState = {
     error: null
 };
 
+
 export default function dataReducer(state = initialState, action) {
     // console.log(action)
     switch (action.type) {
         case FETCH_DATA_BEGIN:
             // Mark the state as "loading" so we can show a spinner or something
             // Also, reset any errors. We're starting fresh.
+            // console.log(state)
             return {
                 ...state,
                 loading: true,

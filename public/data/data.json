@@ -27,7 +27,7 @@
             "url": "gifpaint",
             "title": "gifpaint.in",
             "img": "ezgif.com-754a7b199a.gif",
-            "link": "http://gifpaint.hulea.org/",
+            "link": "https://gifpaint.hulea.org/",
             "siteInfo": "<p>There are a lot of odd spaces in the internet, one of which is the animated gif. After completing yourimage.io, I was interested in extending the idea of random image collage and image painting to make use of animated content.</p><p> Utilizing gif.js, native canvas api and imgur I was able to create a website that has the ability to paint and collage with animated content. I want to add more brushes and the ability to save and share the artwork that is created.</P>"
         },
         {
@@ -35,24 +35,32 @@
             "url": "yourimage",
             "title": "yourimage.io",
             "img": "1464932541.png",
-            "link": "http://yourimage.hulea.org/",
+            "link": "https://yourimage.hulea.org/",
             "siteInfo": "<p>I used the JavaScript canvas API and paper.js to create this website. It allows users to use their mouse or touch device to paint with images from the Imgur API.</p><p> The program also allows user to save their creation </p><p> Using the combination of the unknown (Not knowing which image will be next), collage (<a target=\"_blank\" href=\"https://en.wikipedia.org/wiki/Collage\">https://en.wikipedia.org/wiki/Collage</a>), and a version of action painting (<a target=\"_blank\" href=\"https://en.wikipedia.org/wiki/Action_painting\">https://en.wikipedia.org/wiki/Action_painting</a>) the results become unique artwork to share.</p><p> I move this logic forward with the gif paint program I also developing.</p>"
         },
         {
             "id": "3",
             "url": "nhm",
             "title": "nhm.org",
-            "img": "nhm1.png",
-            "link": "http://nhm.org/",
-            "siteInfo": "<p>For the main NHM site I coded a step-by-step field trip sign-up mechanism for the education department, with specific logic that catered to very specific needs. I wrote the new homepage design that updated an aging design with a more pointed and strategic design, that benefited not only use of the page but also leveraging possible analytic conversion.</p><p> I added a custom calendar front end and back end solution that works with Drupal, providing end points that can power multiple contexts throughout the site. This year, I worked with our digital designer to add a modernized basic template that is responsive and uses a new menu that makes us of Drupal’s menu system so it could be maintained by Drupal’s GUI.</p>"
+            "img": "nhm1.jpg",
+            "link": "https://nhm.org/",
+            "siteInfo": "<p>For the main NHM site I coded a step-by-step field trip sign-up mechanism for the education department, with specific logic that catered to very specific needs. I wrote the new homepage design that updated an aging design with a more pointed and strategic design, that benefited not only use of the page but also leveraging possible analytic conversion.</p><p> I added a custom calendar front end and back end solution that works with Drupal, providing end points that can power multiple contexts throughout the site. I worked with our digital designer to add a modernized basic template and uses a new menu that makes us of Drupal’s menu system so it could be maintained by Drupal’s GUI.</p><p>I also designed and coded the <a href='https://nhm.org/site/research-collections/news' target='_blank'>Research & Collections News part of the site</p>"
         },
         {
             "id": "4",
             "url": "ptero",
             "title": "nhm.org/pterosaurs",
-            "img": "ptero.png",
-            "link": "http://nhm.org/pterosaurs/",
+            "img": "ptero.jpg",
+            "link": "https://nhm.org/pterosaurs/",
             "siteInfo": "<p>I converted old code from a game the institution paid for several years ago into a robust, responsive game that allows users to determine what pterosaur they “were,” based on question logic.</p><p> The entire site was built off a responsive framework that I developed, because I needed all the code to play together, and a framework would have slowed the process. I created a “pterosaur tracker” that used the Google maps API and JS to show a pterosaur fly across the U.S., making stops on its way to the museum. </p><p>I utilized the JS Canvas API to create an image that would follow the rotational position of the KML points which gave a feeling of the pterosaur actually flying. I used requestAnimationFrame and the rendering engine which provided the pterosaur flying on the Google Map with 60fps, allowing fluid animation and preventing jitter.</p>"
+        },
+        {
+            "id": "5",
+            "url": "nature",
+            "title": "nhm.org/nature",
+            "img": "nature.jpg",
+            "link": "https://nhm.org/nature/",
+            "siteInfo": "<p>Drupal 7 Site with custom built Blog.</p><p>I worked with Hello Design to build the Nature Map using Google Maps API and Inaturalist API to showcase urban nature in Los Angeles</p><p></p>"
         }
     ],
     "cv": [

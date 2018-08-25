@@ -22,7 +22,7 @@ export function fetchData() {
     return dispatch => {
         dispatch(fetchDataBegin());
         // console.log('here')
-        return fetch("https://herriott.io/data.json")
+        return fetch("/data/data.json")
             .then(handleErrors)
             .then(res => res.json())
             .then(json => {

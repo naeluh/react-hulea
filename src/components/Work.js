@@ -1,6 +1,6 @@
 import React from 'react'
 import { Link } from "react-router-dom"
-import data from '../data/data.json'
+// import data from '../data/data.json'
 
 class Work extends React.Component {
     createProjects = (d) => {
@@ -19,12 +19,20 @@ class Work extends React.Component {
 
     render() {
         console.log(this)
+        if (this.props.items.work === undefined) {
+            return <div>Loading...</div>
+        }
         return (
             <div className="background-content">
-                {this.createProjects(data)}
+                <section className="offset60">
+                    <h1 id="title">Work</h1>
+                </section>
+                {this.createProjects(this.props.items)}
             </div>
         )
     }
 }
+
+
 
 export default Work

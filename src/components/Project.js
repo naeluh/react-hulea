@@ -1,6 +1,6 @@
 import React from 'react'
 import { Link } from "react-router-dom"
-import data from '../data/data.json'
+// import data from '../data/data.json'
 
 const createProject = (d, m) => {
     let project = ''
@@ -35,9 +35,12 @@ const createProject = (d, m) => {
 class Project extends React.Component {
     
     render() {
+        if (this.props.items.work === undefined) {
+            return <div>Loading...</div>
+        } 
         return (
             <div>
-               {createProject(data, this.props.match)}
+               {createProject(this.props.items, this.props.match)}
             </div>
         )
     }

@@ -3,14 +3,16 @@
 //===========//
 import React from 'react'
 import Site from './layout/Site'
-import Content from './layout/Content'
 import Footer from './layout/Footer'
 import Nav from './layout/Nav'
 import { connect } from "react-redux"
 import { fetchData } from '../actions/actions'
-import { BrowserRouter as Router} from 'react-router-dom'
 
 class Layout extends React.Component {
+  
+  componentWillUpdate() {
+		window.scrollTo(0, 0);
+	}
 
   componentDidMount() {
     this.props.dispatch(fetchData())
@@ -19,7 +21,9 @@ class Layout extends React.Component {
   render() {
     const { error, loading, items } = this.props;
 
-    // console.log(items)
+    const RouteComponent = this.props.component
+
+    // console.log(items, this)
 
     if (error) {
       return <div>Error! {error.message}</div>
@@ -30,13 +34,11 @@ class Layout extends React.Component {
     }
 
     return (
-      <Router>
-        <Site>
-          <Nav />
-          <Content items={items} />
-          <Footer />
-        </Site>
-      </Router>
+      <Site>
+        <Nav />
+        <RouteComponent items={items} error={error} loading={loading} match={this.props.computedMatch}/>
+        <Footer />
+      </Site>
     )
   }
 }

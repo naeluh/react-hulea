@@ -1,6 +1,5 @@
 import React from 'react'
 import { Link } from "react-router-dom"
-import data from '../data/data.json'
 
 class About extends React.Component {
   
@@ -35,12 +34,14 @@ class About extends React.Component {
   }
 
   render() {
-
+    if (this.props.items.cv === undefined) {
+      return <div>Loading...</div>
+    } 
     return (
       <div className="background-content">
         <section className="offset60">
           <h1 id="title">About Nick Hulea</h1>
-          {this.createCV(data)}
+          {this.createCV(this.props.items)}
         </section>
         <section className="offset60">
           <p><Link to="/work">Work</Link></p>

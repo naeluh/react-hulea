@@ -192,9 +192,6 @@ html, body, div, span, applet, object, iframe, blockquote, pre, a, abbr, acronym
   }
   
   .background-content {
-    height: 100%;
-    overflow-y: auto;
-    overflow-x: hidden;
   }
   
   nav {
@@ -386,6 +383,10 @@ html, body, div, span, applet, object, iframe, blockquote, pre, a, abbr, acronym
   form, fieldset, label {
     border: none;
   }
+
+  fieldset {
+    padding: 0;
+  }
   
   input {
     width: 100%;
@@ -526,19 +527,17 @@ html, body, div, span, applet, object, iframe, blockquote, pre, a, abbr, acronym
 
 
   footer {
-    background-color: #111;
-    margin-top: 32px;
-    margin-top: 2rem;
-    padding: 32px 0;
-    padding: 2rem 0;
-}
+    background-color: transparent;
+  }
 
 footer div {
   width: calc(100% - 4rem);
   float: left;
   margin-left: 2rem;
+  margin-bottom: 1rem;
+  margin-top: 1rem;
 }
 
 footer div p, footer div a {
-  color: #fff;
+  color: #111;
 }
