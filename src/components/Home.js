@@ -1,7 +1,22 @@
 import React from 'react'
-import { Link } from "react-router-dom";
+import { Link } from "react-router-dom"
+import ReactDOM from 'react-dom'
 
 class Home extends React.Component {
+
+  state = {
+    height: '',
+    width: ''
+  }
+
+  componentDidMount() {
+    const client = ReactDOM.findDOMNode(this.refs['block']).getBoundingClientRect()
+    console.log(client)
+    this.setState(state => ({
+      height: client.height,
+      width: client.width
+    }))
+  }
 
   getRandomArbitrary = (min, max) => {
     return Math.random() * (max - min) + min
@@ -24,10 +39,12 @@ class Home extends React.Component {
           <p>Samples of my work can be found <Link to="work" title="work" alt="work">here .</Link></p>
           <p>If you would like to contact me or if you have any questions click <Link to="contact" title="contact" alt="contact" >here .</Link></p>
         </section>
-        <div id="wrap"><div id="block" style={{
+        <div id="block" ref="block" style={{
           transform: 'rotate3d(1, 1, 1, ' + this.r + 'deg)',
-          backgroundColor: this.color()
-        }}></div></div>
+          backgroundColor: this.color(),
+          height: this.state.height,
+          width: this.state.width
+        }}></div>
       </div>
     )
   }

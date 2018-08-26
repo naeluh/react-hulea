@@ -18,10 +18,6 @@ class Work extends React.Component {
     }
 
     render() {
-        console.log(this)
-        if (this.props.items.work === undefined) {
-            return <div>Loading...</div>
-        }
         return (
             <div className="background-content">
                 <section className="offset60">

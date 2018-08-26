@@ -35,9 +35,6 @@ const createProject = (d, m) => {
 class Project extends React.Component {
     
     render() {
-        if (this.props.items.work === undefined) {
-            return <div>Loading...</div>
-        } 
         return (
             <div>
                {createProject(this.props.items, this.props.match)}

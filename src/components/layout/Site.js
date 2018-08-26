@@ -8,5 +8,6 @@ const Site = styled.div`
 	flex-direction: column;
 	align-items: stretch;
 	min-height: 100vh;
+	overflow-x: hidden;
 `
 export default Site

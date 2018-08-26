@@ -10,26 +10,25 @@ import { fetchData } from '../actions/actions'
 
 class Layout extends React.Component {
   
-<<<<<<< HEAD
   componentWillUpdate() {
 		window.scrollTo(0, 0);
 	}
 
-=======
->>>>>>> db87159c7d99da5c46ffe79ae8b4cedfe530c4ba
-  componentDidMount() {
+   componentDidMount() {
     this.props.dispatch(fetchData())
   }
 
   render() {
-    const { error, loading, items } = this.props;
+    const { error, loading, items, component, computedMatch } = this.props;
 
-    const RouteComponent = this.props.component
-
-    // console.log(items, this)
+    const RouteComponent = component
 
     if (error) {
       return <div>Error! {error.message}</div>
+    }
+
+    if (items.work === undefined) {
+      return <div>Loading...</div>
     }
 
     if (loading) {
@@ -39,7 +38,7 @@ class Layout extends React.Component {
     return (
       <Site>
         <Nav />
-        <RouteComponent items={items} error={error} loading={loading} match={this.props.computedMatch}/>
+        <RouteComponent items={items} error={error} loading={loading} match={computedMatch}/>
         <Footer />
       </Site>
     )

@@ -34,9 +34,6 @@ class About extends React.Component {
   }
 
   render() {
-    if (this.props.items.cv === undefined) {
-      return <div>Loading...</div>
-    } 
     return (
       <div className="background-content">
         <section className="offset60">
