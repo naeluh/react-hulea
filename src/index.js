@@ -10,10 +10,16 @@ import { createLogger } from 'redux-logger'
 import { routerMiddleware, connectRouter, ConnectedRouter } from 'connected-react-router'
 import { createBrowserHistory } from 'history'
 import './index.scss'
-import routes from './routes';
+import routes from './routes'
 
 // const siteBaseUrl = window.location.origin.replace(['http://', 'https://'], '')
-const history = createBrowserHistory();
+const history = createBrowserHistory()
+
+history.listen(function (location) {
+  window.ga('set', 'page', location.pathname + location.search);
+  window.ga('send', 'pageview');
+})
+
 const store = createStore(
   connectRouter(history)(rootReducer),
   compose(

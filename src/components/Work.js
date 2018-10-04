@@ -9,7 +9,7 @@ class Work extends React.Component {
             let value = d.work[index];
             links.push(
                 <section key={index} className="offset0"><Link to={`/project/${value.url}`} title="#" alt="#">
-                    <div className="imgHero" style={{ backgroundImage: `url(./data/${value.img})` }}></div>
+                    <div className="imgHero" style={{ backgroundImage: `url(./${value.img})` }}></div>
                     <h2 className="imgTitle">{value.title}</h2></Link>
                 </section>
             )
